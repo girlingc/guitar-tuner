@@ -1,4 +1,4 @@
-import Interface from "./Components/";
+import Interface from "./Components/Interface";
 
 function App() {
   return (
