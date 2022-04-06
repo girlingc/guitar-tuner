@@ -3,7 +3,7 @@ import React from "react";
 const Interface = () => {
   return (
     <div>
-    Hello World
+      Hello World
     </div>
   )
 }
