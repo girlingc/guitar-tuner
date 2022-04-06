@@ -1,5 +1,4 @@
 import React from "react";
-import getFrequency from "../../notes-frequencies";
 import getTunings from "../../tunings";
 
 const Interface = () => {
