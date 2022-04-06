@@ -1,3 +1,5 @@
+import getFrequency from "./notes-frequencies";
+
 const guitarTunings = {
   bassGuitar: {
     "Standard Bass (EADG)": ["E1", "A1", "D2", "G2"],
@@ -36,4 +38,25 @@ const guitarTunings = {
   eightString: {},
 };
 
-export default guitarTunings;
+const getTunings = (guitar, tuning) => {
+  const frequencies = []
+  for (let frequency of guitarTunings[guitar][tuning]) {
+    frequencies.push(`${getFrequency(frequency)}, `)
+  }
+
+  return (
+    <div>
+      <div>
+        {tuning}
+      </div>
+      <div>
+        {guitarTunings[guitar][tuning]}
+      </div>
+      <div>
+        {frequencies}
+      </div>
+    </div>
+  )
+}
+
+export default getTunings;

@@ -1,10 +1,11 @@
 import React from "react";
 import getFrequency from "../../notes-frequencies";
+import getTunings from "../../tunings";
 
 const Interface = () => {
   return (
     <div>
-      {getFrequency('A2#')}
+      {getTunings("sixString", "E Standard (EADGBE)")}
     </div>
   )
 }
