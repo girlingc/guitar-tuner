@@ -1,14 +1,10 @@
 import React from "react";
-import notesFrequency from "../../notes-frequencies";
-
-const getFrequency = (note) => {
-  return notesFrequency[note]
-}
+import getFrequency from "../../notes-frequencies";
 
 const Interface = () => {
   return (
     <div>
-      {getFrequency('A2')}
+      {getFrequency('A2#')}
     </div>
   )
 }
