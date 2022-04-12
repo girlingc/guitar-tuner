@@ -12,7 +12,6 @@ const guitarTunings = {
     "Drop F (FCFA#)": ["F1", "C2", "F2", "A2#"],
     "Slipnot Tuning (F#F#BE)": ["F0#", "F1#", "B1", "E2"],
     "C# Variation (C#GCE)": ["C2#", "G2", "C3", "E3"],
-
   },
   ukulele: {
     "Ukelele GCEA (GCEA)": ["G3", "C3", "E3", "A3"],
@@ -32,33 +31,27 @@ const guitarTunings = {
     "D# Standard": ["D2#", "G2#", "C3#", "F3#", "A3#", "D4#"],
     "D Standard": ["D2", "G2", "C3", "F3", "A3", "D4"],
     "Drop C": ["C2", "G2", "C3", "F3", "A3", "D4"],
-
   },
   sevenString: {
-    "B Standard BEADGBE": ["B1", "E2", "A2", "D3", "G3", "B3", "E4"]
+    "B Standard (BEADGBE)": ["B1", "E2", "A2", "D3", "G3", "B3", "E4"],
   },
-  eightString: {},
 };
 
 const getTunings = (guitar, tuning) => {
-  const frequencies = []
+  const frequencies = [];
+  const notes = []
   for (let frequency of guitarTunings[guitar][tuning]) {
-    frequencies.push(`${getFrequency(frequency)}, `)
+    frequencies.push(`${getFrequency(frequency)} `);
+    notes.push(`${frequency} `)
   }
-
+  
   return (
     <div>
-      <div>
-        {tuning}
-      </div>
-      <div>
-        {guitarTunings[guitar][tuning]}
-      </div>
-      <div>
-        {frequencies}
-      </div>
+      <div>{tuning}</div>
+      <div>{notes}</div>
+      <div>{frequencies}</div>
     </div>
-  )
-}
+  );
+};
 
 export default getTunings;
